@@ -1,6 +1,9 @@
-ruby on rails３にて携帯サイトを作った際に、googleアナリティック解析ライブラリー
+ruby on rails３にて携帯サイトを作った際に、googleアナリティクス解析ライブラリー
 
-１、libにgoogleアナリティックを設置
+前提条件
+1、jpmobile (1.0.0.pre)
+
+１、libにgoogleアナリティクスを設置
 
 ２、application_helperに下記を追加
   # Copyright 2009 Google Inc. All Rights Reserved.
@@ -15,6 +18,7 @@ ruby on rails３にて携帯サイトを作った際に、googleアナリティ�
       "utmp" => request.request_uri
     }
     tmp = []
+    tmp << "&amp;"
     url_params.keys.sort.each{|key|
        tmp << "#{key}=" + CGI.escape(url_params[key])
     }
