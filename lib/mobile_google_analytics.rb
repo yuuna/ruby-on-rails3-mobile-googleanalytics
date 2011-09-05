@@ -218,11 +218,6 @@ class MobileGoogleAnalytics
       if sn == nil
         sn = request.mobile.x_jphone_uid()
       end
-    when Jpmobile::Mobile::Jphone
-      sn = request.mobile.serial_number()
-      if sn == nil
-        sn = request.mobile.x_jphone_uid()
-      end
     when Jpmobile::Mobile::Emobile
       # EMnet対応端末ユニークID
       sn = request.mobile.em_uid()
